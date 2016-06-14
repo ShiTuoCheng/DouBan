@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="1dp"
+        card_view:cardUseCompatPadding="true"
+        android:padding="10dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:layout_width="150dp"
+                android:layout_height="190dp"
+                android:id="@+id/cover_networkImageView"
+                android:layout_alignParentLeft="true"
+                android:padding="6dp"/>
+
+            <TextView
+                android:paddingTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/movie_title_textView"
+                android:textStyle="bold"
+                android:text="电影名称"
+                android:layout_toRightOf="@id/cover_networkImageView"
+                android:paddingRight="16dp"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subtitle_textView"
+                android:layout_below="@id/movie_title_textView"
+                android:text="电影原名"
+                android:layout_toRightOf="@id/cover_networkImageView"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rating_textView"
+                android:layout_below="@id/subtitle_textView"
+                android:textStyle="bold"
+                android:text="评分"
+                android:paddingTop="16dp"
+                android:layout_toRightOf="@id/cover_networkImageView"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_textView"
+                android:id="@+id/year_textView"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:layout_toRightOf="@id/cover_networkImageView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/year_textView"
+                android:id="@+id/generes_textView"
+                android:textStyle="bold"
+                android:text="电影类型"
+                android:textSize="13sp"
+                android:paddingTop="10dp"
+                android:layout_toRightOf="@id/cover_networkImageView"
+            />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
